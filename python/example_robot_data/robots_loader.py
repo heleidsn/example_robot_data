@@ -554,7 +554,69 @@ class SimpleHumanoidClassicalLoader(SimpleHumanoidLoader):
 
 class IrisLoader(RobotLoader):
     path = "iris_description"
-    urdf_filename = "iris_simple.urdf"
+    # urdf_filename = "iris_simple.urdf"
+    urdf_filename = "iris_pepms.urdf"
+    free_flyer = True
+
+# New classes from PepMs
+class Hexacopter680FlyingArm2Loader(RobotLoader):
+    path = "hexacopter680_description"
+    urdf_filename = "hexacopter680_flying_arm_2.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class FlyingArm5Loader(RobotLoader):
+    path = "flying_arm_5_description"
+    urdf_filename = "flying_arm_5.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = False
+
+
+class FlyingArm3Loader(RobotLoader):
+    path = "flying_arm_3_description"
+    urdf_filename = "flying_arm_3.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = False
+
+
+class HexTiltLoader(RobotLoader):
+    path = "hextilt_description"
+    urdf_filename = "hextilt.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class HexTiltFlyingArm5(RobotLoader):
+    path = "hextilt_description"
+    urdf_filename = "hextilt_flying_arm_5.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class Hexacopter370Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class Hexacopter370FlyingArm3Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370_flying_arm_3.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+class Hexacopter370FlyingArm1Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370_flying_arm_1.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+class Hexacopter370FlyingArm5Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370_flying_arm_5.urdf"
+    urdf_subpath = "urdf"
     free_flyer = True
 
 
@@ -610,6 +672,16 @@ ROBOTS = {
     "ur5_limited": UR5LimitedLoader,
     "ur10": UR10Loader,
     "ur10_limited": UR10LimitedLoader,
+    # New classes from PepMs
+    'flying_arm_5': FlyingArm5Loader,
+    'flying_arm_3': FlyingArm3Loader,
+    'hexacopter370': Hexacopter370Loader,
+    'hexacopter370_flying_arm_5': Hexacopter370FlyingArm5Loader,
+    'hexacopter370_flying_arm_3': Hexacopter370FlyingArm3Loader,
+    'hexacopter370_flying_arm_1': Hexacopter370FlyingArm1Loader,
+    'hexacopter680_flying_arm_2': Hexacopter680FlyingArm2Loader,
+    'hextilt': HexTiltLoader,
+    'hextilt_flying_arm_5': HexTiltFlyingArm5,
 }
 
 

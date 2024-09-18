@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="flying_arm_5" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="world"/>
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="arm_baselink"/>
+  </joint>
+
+  <link name="arm_baselink">
+    <inertial>
+      <origin xyz="5.4471E-05 0.00055544 0.0045971" rpy="0 0 0" />
+      <mass value="0.27973" />
+      <inertia ixx="0.00010284" ixy="5.704E-10" ixz="7.6592E-09" iyy="7.9509E-05" iyz="5.7105E-10" izz="9.2151E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="arm_baselink">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+  <link name="arm_link1">
+    <inertial>
+      <origin xyz="0.097289 5.2467E-05 -0.012147" rpy="0 0 0" />
+      <mass value="0.12284" />
+      <inertia ixx="2.3846E-05" ixy="-5.0883E-13" ixz="3.5276E-06" iyy="0.00021635" iyz="-1.2916E-12" izz="0.00023624" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link1.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link1.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="arm_link1">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+  <joint name="arm_bl_link1" type="revolute">
+    <origin xyz="0 0 0" rpy="1.5708 1.5708 0" />
+    <parent link="arm_baselink" />
+    <child link="arm_link1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="arm_link2">
+    <inertial>
+      <origin xyz="0.043238 2.4308E-05 -0.0087926" rpy="0 0 0" />
+      <mass value="0.11474" />
+      <inertia ixx="1.174E-05" ixy="1.3294E-09" ixz="-2.0499E-06" iyy="4.7747E-05" iyz="-1.6102E-08" izz="5.2344E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link2.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link2.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="arm_link2">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+  <joint name="arm_link1_link2" type="revolute">
+    <origin xyz="0.132 0 0" rpy="0 0 0" />
+    <parent link="arm_link1" />
+    <child link="arm_link2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="arm_link3">
+    <inertial>
+      <origin xyz="0.00020827 -0.0031223 -0.011966" rpy="0 0 0" />
+      <mass value="0.068772" />
+      <inertia ixx="6.8293E-06" ixy="4.2309E-08" ixz="1.548E-09" iyy="7.2432E-06" iyz="1.6138E-08" izz="7.1043E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link3.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link3.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="arm_link3">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+  <joint name="arm_link2_link3" type="revolute">
+    <origin xyz="0.075 0 0" rpy="0 0 0" />
+    <parent link="arm_link2" />
+    <child link="arm_link3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="arm_link4">
+    <inertial>
+      <origin xyz="0.026125 2.9724E-09 0.0016875" rpy="0 0 0" />
+      <mass value="0.05914" />
+      <inertia ixx="2.2712E-05" ixy="2.3256E-12" ixz="5.2509E-09" iyy="2.472E-05" iyz="3.3225E-09" izz="1.0444E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link4.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link4.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="arm_link4">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+  <joint name="arm_link3_link4" type="revolute">
+    <origin xyz="0 0 -0.011925" rpy="1.5708 0 0" />
+    <parent link="arm_link3" />
+    <child link="arm_link4" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="arm_ee">
+    <inertial>
+      <origin xyz="1.7347E-18 -1.0246E-17 0.025817" rpy="0 0 0" />
+      <mass value="0.021791" />
+      <inertia ixx="7.9107E-06" ixy="1.6653E-13" ixz="2.9904E-21" iyy="1.5446E-05" iyz="-1.1963E-21" izz="1.0818E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_ee.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_ee.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="arm_ee">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+  <joint name="arm_link4_ee" type="revolute">
+    <origin xyz="0.034 0 -0.00025" rpy="1.5708 0 1.5708" />
+    <parent link="arm_link4" />
+    <child link="arm_ee" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/flying_arm_5</robotNamespace>
+    </plugin>
+  </gazebo>
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="arm_bl_link1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+</robot>

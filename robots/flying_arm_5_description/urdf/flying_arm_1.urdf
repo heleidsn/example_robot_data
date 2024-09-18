@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="flying_arm_1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="world"/>
+
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="arm_baselink"/>
+  </joint>
+
+  <link name="arm_baselink">
+    <inertial>
+      <origin xyz="5.4471E-05 0.00055544 0.0045971" rpy="0 0 0" />
+      <mass value="0.27973" />
+      <inertia ixx="0.00010284" ixy="5.704E-10" ixz="7.6592E-09" iyy="7.9509E-05" iyz="5.7105E-10" izz="9.2151E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="arm_link1">
+    <inertial>
+      <origin xyz="0.097289 5.2467E-05 -0.012147" rpy="0 0 0" />
+      <mass value="0.12284" />
+      <inertia ixx="2.3846E-05" ixy="-5.0883E-13" ixz="3.5276E-06" iyy="0.00021635" iyz="-1.2916E-12" izz="0.00023624" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link1.dae" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link1.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- <gazebo reference="arm_link1">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo> -->
+  <joint name="arm_bl_link1" type="revolute">
+    <origin xyz="0 0 0" rpy="1.5708 1.5708 0" />
+    <parent link="arm_baselink" />
+    <child link="arm_link1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.0" upper="1.0" effort="0.50" velocity="3" />
+    <!-- <dynamics damping="0.7"/> -->
+  </joint>
+  <!-- <gazebo reference="arm_bl_link1">
+  </gazebo> -->
+  <!-- <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="arm_bl_link1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/flying_arm_1</robotNamespace>
+    </plugin>
+  </gazebo>
+  <static>false</static> -->
+</robot>
