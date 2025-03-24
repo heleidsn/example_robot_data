@@ -618,6 +618,18 @@ class Hexacopter370FlyingArm5Loader(RobotLoader):
     urdf_filename = "hexacopter370_flying_arm_5.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
+    
+class S500UAMLoader(RobotLoader):
+    path = "s500_description"
+    urdf_filename = "s500_uam.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+    
+class S500Loader(RobotLoader):
+    path = "s500_description"
+    urdf_filename = "s500.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
 
 
 ROBOTS = {
@@ -682,6 +694,8 @@ ROBOTS = {
     'hexacopter680_flying_arm_2': Hexacopter680FlyingArm2Loader,
     'hextilt': HexTiltLoader,
     'hextilt_flying_arm_5': HexTiltFlyingArm5,
+    's500_uam': S500UAMLoader,
+    's500_quadrotor': S500Loader,
 }
 
 
