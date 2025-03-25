@@ -13,31 +13,7 @@ This repository is forked from PepMS's [repo](https://github.com/PepMS/example-r
 
 - Added s500_quadrotor and s500_uam for personal project.
 
-## :penguin: Installation
-
-### :package: From Debian / Ubuntu packages, with [robotpkg](http://robotpkg.openrobots.org)
-
-1. If you have never added robotpkg's software repository, [do it now](http://robotpkg.openrobots.org/debian.html):
-   ```bash
-   sudo tee /etc/apt/sources.list.d/robotpkg.list <<EOF
-   deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub $(lsb_release -sc) robotpkg
-   EOF
-
-   curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | sudo apt-key add -
-   sudo apt update
-   ```
-
-2. installation of example-robot-data and its python utils:
-   ```bash
-   sudo apt install robotpkg-py3\*-example-robot-data
-   ```
-
-### :snake: From <img src="https://s3.amazonaws.com/conda-dev/conda_logo.svg" height="18">
-
-As simple as that:
-```bash
-   conda install example-robot-data -c conda-forge
-```
+## Installation
 
 ### :turtle: With ROS
 
@@ -46,6 +22,7 @@ Just clone it (with `--recursive`) into a catkin workspace.
 ### :file_folder: From source
 
 Clone it (with `--recursive`), create a `build` directory inside, and:
+
 ```bash
 cmake .. && make && make install
 ```
