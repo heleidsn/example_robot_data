@@ -7,9 +7,11 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/gepetto/example-robot-data/master.svg)](https://results.pre-commit.ci/latest/github/gepetto/example-robot-data/master)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+This repository is forked from PepMS's [repo](https://github.com/PepMS/example-robot-data) used for eagle mpc project.
 
-This repository includes a set of robot descriptions that are aimed to be used in benchmarking, unit-tests, teachings,
-tutorials or show-cases. These source files do not intend to substitute their original repositories.
+## What's new
+
+- Added s500_quadrotor and s500_uam for personal project.
 
 ## :penguin: Installation
 
