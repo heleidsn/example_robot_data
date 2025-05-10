@@ -620,14 +620,14 @@ class Hexacopter370FlyingArm5Loader(RobotLoader):
     free_flyer = True
     
 class S500UAMLoader(RobotLoader):
-    path = "s500_description"
+    path = "s500_description/s500_uam"
     urdf_filename = "s500_uam.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
     
 class S500Loader(RobotLoader):
-    path = "s500_description"
-    urdf_filename = "s500.urdf"
+    path = "s500_description/s500_quadrotor"
+    urdf_filename = "s500_quadrotor.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
 

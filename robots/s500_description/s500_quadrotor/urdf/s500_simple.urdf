@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="s500_quadrotor">
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.772" />
+      <inertia
+        ixx="0.0165"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.0186"
+        iyz="0.0"
+        izz="0.0250" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rotor_1">
+    <inertial>
+      <origin
+        xyz="3.9471E-08 0.025041 -1.4592E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.010198" />
+      <inertia
+        ixx="3.3719E-05"
+        ixy="7.4123E-13"
+        ixz="-4.3241E-07"
+        iyy="3.3918E-05"
+        iyz="-3.8834E-11"
+        izz="2.8343E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_ccw.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_ccw.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor_joint_1" type="fixed">
+    <origin
+      xyz="0.171 0.171 0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link name="rotor_2">
+    <inertial>
+      <origin
+        xyz="8.1559E-08 0.027195 -1.4122E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.010198" />
+      <inertia
+        ixx="3.3719E-05"
+        ixy="-8.3558E-13"
+        ixz="-4.3246E-07"
+        iyy="3.3919E-05"
+        iyz="-4.2468E-11"
+        izz="2.8344E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_cw.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_cw.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor_joint_2" type="fixed">
+    <origin
+      xyz="-0.171 0.171 0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link name="rotor_3">
+    <inertial>
+      <origin
+        xyz="9.9115E-08 0.011499 -1.3684E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.010198" />
+      <inertia
+        ixx="3.3719E-05"
+        ixy="1.6825E-12"
+        ixz="-4.3246E-07"
+        iyy="3.3919E-05"
+        iyz="-5.4463E-11"
+        izz="2.8343E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_ccw.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_ccw.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor_joint_3" type="fixed">
+    <origin
+      xyz="-0.171 -0.171 0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link name="rotor_4">
+    <inertial>
+      <origin
+        xyz="1.4103E-07 0.009346 -1.3967E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.010198" />
+      <inertia
+        ixx="3.3719E-05"
+        ixy="1.1737E-12"
+        ixz="-4.3243E-07"
+        iyy="3.3918E-05"
+        iyz="-4.6991E-11"
+        izz="2.8343E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_cw.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eagle_mpc_yaml/s500_robot/s500_quadrotor/meshes/iris_prop_cw.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor_joint_4" type="fixed">
+    <origin
+      xyz="0.1701 -0.1701 0.0603"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
