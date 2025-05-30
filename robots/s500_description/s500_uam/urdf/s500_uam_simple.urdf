@@ -24,7 +24,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/base_link.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/base_link.dae" />
       </geometry>
       <material
         name="">
@@ -38,7 +38,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/base_link.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/base_link.dae" />
       </geometry>
     </collision>
   </link>
@@ -63,7 +63,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_ccw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_ccw.dae" />
       </geometry>
       <material
         name="">
@@ -77,7 +77,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_ccw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_ccw.dae" />
       </geometry>
     </collision>
   </link>
@@ -113,7 +113,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_ccw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_ccw.dae" />
       </geometry>
       <material
         name="">
@@ -127,7 +127,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_ccw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_ccw.dae" />
       </geometry>
     </collision>
   </link>
@@ -163,7 +163,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_cw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_cw.dae" />
       </geometry>
       <material
         name="">
@@ -177,7 +177,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_cw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_cw.dae" />
       </geometry>
     </collision>
   </link>
@@ -213,7 +213,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_cw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_cw.dae" />
       </geometry>
       <material
         name="">
@@ -227,7 +227,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/iris_prop_cw.dae" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/iris_prop_cw.dae" />
       </geometry>
     </collision>
   </link>
@@ -263,7 +263,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_1.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_1.STL" />
       </geometry>
       <material
         name="">
@@ -277,14 +277,14 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_1.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint name="joint_1" type="revolute">
     <origin
       xyz="0.0007 0 -0.07275"
-      rpy="0 -1 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -314,7 +314,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_2.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_2.STL" />
       </geometry>
       <material
         name="">
@@ -328,14 +328,14 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_2.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint name="joint_2" type="revolute">
     <origin
       xyz="0 0 -0.09925"
-      rpy="0 -0.6 0" />
+      rpy="0 0 0" />
     <parent
       link="link_1" />
     <child
@@ -365,7 +365,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_3.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_3.STL" />
       </geometry>
       <material
         name="">
@@ -379,7 +379,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_3.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -415,7 +415,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_4.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_4.STL" />
       </geometry>
       <material
         name="">
@@ -429,7 +429,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://example-robot-data/robots/s500_description/meshes/link_4.STL" />
+          filename="package://example-robot-data/robots/s500_description/s500_uam/meshes/link_4.STL" />
       </geometry>
     </collision>
   </link>
@@ -444,4 +444,24 @@
     <axis
       xyz="0 1 0" />
   </joint>
+
+  <link name="gripper_link">
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <!-- 使用一个小的box或sphere作为可视化 -->
+            <box size="0.01 0.01 0.01" />  <!-- 或者使用 <sphere radius="0.005" /> -->
+        </geometry>
+        <material name="">
+            <color rgba="1 0 0 0.5" />  <!-- 红色，半透明 -->
+        </material>
+    </visual>
+    <!-- 不需要collision和inertial属性，因为这是虚拟link -->
+  </link>
+  <joint name="gripper_joint" type="fixed">
+    <origin xyz="0 0 -0.14" rpy="0 0 0" />  <!-- 调整xyz和rpy以匹配爪子位置 -->
+    <parent link="link_2" />
+    <child link="gripper_link" />
+  </joint>
+
 </robot>

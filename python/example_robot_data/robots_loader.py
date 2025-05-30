@@ -630,6 +630,12 @@ class S500Loader(RobotLoader):
     urdf_filename = "s500_quadrotor.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
+    
+class S500UAMSimpleLoader(RobotLoader):
+    path = "s500_description/s500_uam"
+    urdf_filename = "s500_uam_simple.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
 
 
 ROBOTS = {
@@ -695,6 +701,7 @@ ROBOTS = {
     'hextilt': HexTiltLoader,
     'hextilt_flying_arm_5': HexTiltFlyingArm5,
     's500_uam': S500UAMLoader,
+    's500_uam_simple': S500UAMSimpleLoader,
     's500_quadrotor': S500Loader,
 }
 
