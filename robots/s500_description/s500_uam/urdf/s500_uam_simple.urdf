@@ -393,6 +393,11 @@
       link="link_3" />
     <axis
       xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="10"
+      velocity="1" />
   </joint>
   <link name="link_4">
     <inertial>
@@ -443,6 +448,11 @@
       link="link_4" />
     <axis
       xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
   </joint>
 
   <link name="gripper_link">
